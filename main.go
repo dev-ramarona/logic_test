@@ -2,38 +2,20 @@ package main
 
 import (
 	"fmt"
+	soal1 "logic_test/soal_1"
+	soal2 "logic_test/soal_2"
+	soal3 "logic_test/soal_3"
 )
 
 func main() {
 
-	// Output yang di harapkan
-	expect := "CGK-UPG-DJJ-MKQ-SOQ" // Do not use this variable
-	output := ""                    // Fill this variable
+	fmt.Println("\nSoal 1")
+	soal1.Soal1()
 
-	// Parameter
-	aroute := map[string]string{
-		"DJJ-SOQ": "DJJ-SOQ",
-		"UPG-SOQ": "UPG-SOQ",
-		"CGK-UPG": "CGK-UPG",
-		"CGK-DJJ": "CGK-DJJ",
-		"CGK-SOQ": "CGK-SOQ",
-		"DJJ-MKQ": "DJJ-MKQ",
-		"MKQ-SOQ": "MKQ-SOQ",
-		"UPG-MKQ": "UPG-MKQ",
-		"UPG-DJJ": "UPG-DJJ",
-		"CGK-MKQ": "CGK-MKQ",
-	}
+	fmt.Println("\nSoal 2")
+	soal2.Soal2()
 
-	//////////////////// Write your code in here
+	fmt.Println("\nSoal 3")
+	soal3.Soal3()
 
-	//////////////////// Write your code in here
-
-	// Report
-	fmt.Println(aroute)
-	fmt.Printf("Ekpetasi:%s \nOutput:%s\n", expect, output)
-	if expect == output {
-		fmt.Println("BERHASIL")
-		return
-	}
-	fmt.Println("GAGAL")
 }
