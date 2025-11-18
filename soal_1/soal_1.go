@@ -2,8 +2,6 @@ package soal1
 
 import (
 	"fmt"
-	"math"
-	"time"
 )
 
 func Soal1() {
@@ -18,26 +16,7 @@ func Soal1() {
 	}
 
 	//////////////////// Start Write your code answer in here
-	for date := range dateSystem {
-		strDatenw := time.Now().Format("060102")
-		fmtDatenw, _ := time.Parse("060102", strDatenw)
-		difFinald := 0
-		for idx, yearvl := range []int{-1, 0, 1} {
-			strYearnw := time.Now().AddDate(yearvl, 0, 0).Format("06")
-			fmtSbrenw, _ := time.Parse("02Jan06", date+strYearnw)
-			difDatenw := fmtDatenw.Sub(fmtSbrenw)
-			difAbslte := int(math.Abs(difDatenw.Hours() / 24))
-			// fmt.Println(difAbslte, fmtDatenw, fmtSbrenw)
-			if idx == 0 {
-				difFinald = difAbslte
-				strDatenw = fmtSbrenw.Format("060102")
-			} else if difFinald > difAbslte {
-				difFinald = difAbslte
-				strDatenw = fmtSbrenw.Format("060102")
-			}
-		}
-		dateSystem[date] = strDatenw
-	}
+
 	//////////////////// End Write your code answer in here
 
 	// Check output
